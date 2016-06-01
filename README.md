@@ -1,0 +1,1 @@
+## This is a exercise folder for Dr.Novocin's [data structure](http://http://ds.prof.ninja/) class

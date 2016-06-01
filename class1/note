@@ -1,0 +1,10 @@
+Header and include:
+http://www.cplusplus.com/forum/articles/10627/
+
+(1) It speeds up compile time. As your program grows, so does your code, and if everything is in a single file, then everything must be fully recompiled every time you make any little change. This might not seem like a big deal for small programs (and it isn't), but when you have a reasonable size project, compile times can take several minutes to compile the entire program. Can you imagine having to wait that long between every minor change?
+
+Compile / wait 8 minutes / "oh crap, forgot a semicolon" / compile / wait 8 minutes / debug / compile / wait 8 minutes / etc
+
+(2) It keeps your code more organized. If you seperate concepts into specific files, it's easier to find the code you are looking for when you want to make modifications (or just look at it to remember how to use it and/or how it works).
+
+(3) It allows you to separate interface from implementation. If you don't understand what that means, don't worry, we'll see it in action throughout this article.
