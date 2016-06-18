@@ -1,17 +1,25 @@
 #include <iostream>
 #include <string>
+#include <ctime>
 using namespace std;
 
 //Define the interface for a Dog-type
 class Dog {
   private:
     string name; //name is private, the outside world can't access
+    string birth;
   public:
     // this is the "constructor" which 
     // gets executed upon instantiation
     Dog(string starter_name){
         name = starter_name;
+        time_t now = time(0);
+        char* dt = ctime(&now);
+        
+        birth = dt;
     }
+    
+  
     //these are public "methods"
     void read_tag(); //this one will get defined later
     void rename(string new_name){ name = new_name; } //def. here
@@ -20,6 +28,7 @@ class Dog {
 //When defining later I need to include the "scope"
 void Dog::read_tag(){
     cout << "This dog is named " << name << endl;
+    cout << "This dog's birth: " << birth << endl;
 }
 
 
